@@ -221,7 +221,7 @@ open class MeepMeep @JvmOverloads constructor(private val windowSize: Int, fps: 
     }
 
     fun start(): MeepMeep {
-        if (bg == null) setBackground(Background.GRID_BLUE)
+        if (bg == null) setBackground(Background.FIELD_INTO_THE_DEEP_JUICE_DARK)
         windowFrame.isVisible = true
 
         // Default added entities are initialized before color schemes are set
@@ -239,7 +239,7 @@ open class MeepMeep @JvmOverloads constructor(private val windowSize: Int, fps: 
     }
 
     //-------------Theme Settings-------------//
-    fun setBackground(background: Background = Background.GRID_BLUE): MeepMeep {
+    fun setBackground(background: Background = Background.FIELD_INTO_THE_DEEP_JUICE_DARK): MeepMeep {
         val classLoader = Thread.currentThread().contextClassLoader
 
         fun rotated(im: BufferedImage, angle: Double): BufferedImage {
