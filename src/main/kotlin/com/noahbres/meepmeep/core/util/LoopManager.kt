@@ -19,7 +19,6 @@ class LoopManager(targetFPS: Int, val updateFunction: (deltaTime: Long) -> Unit,
 
     fun start() {
         lastBeginTime = System.nanoTime()
-        beginLoopTime = lastBeginTime
         service.scheduleAtFixedRate(::loop, 0L, targetDeltaLoopTime, TimeUnit.NANOSECONDS)
     }
 

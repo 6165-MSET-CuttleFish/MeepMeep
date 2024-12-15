@@ -109,8 +109,9 @@ class RoadRunnerBotEntity(
     }
 
     fun start() {
+        running = false
+        Thread.sleep(100)
         running = true
-        trajectoryPaused = false
         trajectorySequenceElapsedTime = 0.0
     }
 
