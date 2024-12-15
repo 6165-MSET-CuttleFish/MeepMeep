@@ -45,6 +45,14 @@ sourceSets["test"].java {
     srcDir("src/test/kotlin")
 }
 
+tasks.register<JavaExec>("runMeepMeep") {
+    group = "application"
+    description = "Runs the MeepMeep simulation"
+
+    mainClass.set("org.firstinspires.ftc.teamcode.sim.MeepMeepTesting")
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
 // Create sources Jar from main kotlin sources
 val sourcesJar by tasks.creating(Jar::class) {
     archiveClassifier.set("sources")
