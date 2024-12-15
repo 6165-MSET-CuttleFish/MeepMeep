@@ -18,7 +18,6 @@ class LoopManager(targetFPS: Int, val updateFunction: (deltaTime: Long) -> Unit,
     private val service = Executors.newSingleThreadScheduledExecutor()
 
     fun start() {
-        lastBeginTime = System.nanoTime()
         service.scheduleAtFixedRate(::loop, 0L, targetDeltaLoopTime, TimeUnit.NANOSECONDS)
     }
 
